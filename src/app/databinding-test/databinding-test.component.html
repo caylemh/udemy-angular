@@ -1,0 +1,15 @@
+<p>Databinding Test</p>
+<input 
+    type="text"
+    class="form-control"
+    placeholder="Please enter a username..."
+    [(ngModel)] = "username"
+/>
+<p class="col-xs-12">{{ username }}</p>
+<button 
+    class="btn btn-primary"
+    [disabled] = "onChangeUsername()"
+    (click) = "usernameClear()"
+    >
+    Empty the Input
+</button>
