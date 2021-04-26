@@ -18,11 +18,13 @@ export class Assignment3DirectivesComponent implements OnInit {
   onShowDetails() {
     this.clickCount.push(this.count);
     console.log(this.clickCount);
-    if(this.showDetails) {
-      this.showDetails = false;
-    } else {
-      this.showDetails = true;
-    }
+    // if(this.showDetails) {
+    //   this.showDetails = false;      // Old Way, Inefficient
+    // } else {
+    //   this.showDetails = true;
+    // }
+    this.showDetails = !this.showDetails;
+
     this.count++;
   }
 

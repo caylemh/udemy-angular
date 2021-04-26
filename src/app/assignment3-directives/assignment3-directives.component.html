@@ -3,11 +3,11 @@
         <button class='btn btn-primary' (click)="onShowDetails()">Display Details</button>
         <p *ngIf="showDetails">The Secret Password is: JUMANJI</p>
         <p 
-            *ngFor="let click of clickCount, let i = index" 
-            [ngStyle]="{ backgroundColor: i > 4 ? 'blue' : 'white'}"
-            [ngClass]="{changeColor: i > 4}"
+            *ngFor="let click of clickCount" 
+            [ngStyle]="{ backgroundColor: click >= 5 ? 'blue' : 'white'}"
+            [ngClass]="{changeColor: click >= 5}"
         >
-            Button Click {{ clickCount[click]+1 }}
+            Button Click {{ click+1 }}
         </p>
     </div>
 </div>
