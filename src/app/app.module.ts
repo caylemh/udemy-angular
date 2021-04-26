@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { DatabindingTestComponent } from './databinding-test/databinding-test.component';
+import { Assignment1SolutionComponent } from './assignment1-solution/assignment1-solution.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DatabindingTestComponent } from './databinding-test/databinding-test.co
     WarningAlertComponent,
     SuccessAlertComponent,
     DatabindingTestComponent,
+    Assignment1SolutionComponent,
   ],
   imports: [
     BrowserModule,
