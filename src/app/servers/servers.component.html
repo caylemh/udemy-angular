@@ -1,14 +1,22 @@
-<p>Server Name</p>
-<!-- <input type="text" class= 'form-control'
-(input) = 'onUpdateServerName($event)'> -->
-<input type="text" 
-    class= 'form-control'
-    [(ngModel)] = 'serverName'>
-<p class='col-xs-12'>{{ serverName }}</p>
-<button 
-    class='btn btn-primary'
-    [disabled]='!allowNewServer'
-    (click) = 'onCreateServer()'
->Add Server</button>
-<p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
+<div class="container">
+    <p>Server Name</p>
+    <!-- <input type="text" class= 'form-control'
+    (input) = 'onUpdateServerName($event)'> -->
+    <input type="text" 
+        class= 'form-control'
+        [(ngModel)] = 'serverName'>
+    <p class='col-xs-12'>{{ serverName }}</p>
+    <button 
+        class='btn btn-primary'
+        [disabled]='serverName === ""'
+        (click) = 'onCreateServer()'
+    >Add Server</button>
+
+    <!-- Using built-in Directives of Angular -->
+    <p *ngIf="serverCreated">Server was created! Name is {{ serverName }}</p>
+
+    <!-- Use a # reference to create a 'else' statement for ngIf
+        <ng-template #noServer>
+        <p>No Server was created! Please enter a Server Name to create a server...</p>
+    </ng-template> -->
+</div>
