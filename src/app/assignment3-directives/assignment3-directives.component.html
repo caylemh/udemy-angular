@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="col-xs-12">
+        <button class='btn btn-primary' (click)="onShowDetails()">Display Details</button>
+        <p *ngIf="showDetails">The Secret Password is: JUMANJI</p>
+        <p 
+            *ngFor="let click of clickCount, let i = index" 
+            [ngStyle]="{ backgroundColor: i > 4 ? 'blue' : 'white'}"
+            [ngClass]="{changeColor: i > 4}"
+        >
+            Button Click {{ clickCount[click]+1 }}
+        </p>
+    </div>
+</div>

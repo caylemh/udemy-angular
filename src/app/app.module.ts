@@ -9,6 +9,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { DatabindingTestComponent } from './databinding-test/databinding-test.component';
 import { Assignment1SolutionComponent } from './assignment1-solution/assignment1-solution.component';
+import { Assignment3DirectivesComponent } from './assignment3-directives/assignment3-directives.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Assignment1SolutionComponent } from './assignment1-solution/assignment1
     SuccessAlertComponent,
     DatabindingTestComponent,
     Assignment1SolutionComponent,
+    Assignment3DirectivesComponent,
   ],
   imports: [
     BrowserModule,
